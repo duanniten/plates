@@ -18,11 +18,14 @@ def is_valid(s:str):
     #Numbers cannot be used in the middle of a plate
     first_number = False
     for l in s:
-        if l.isdigit():
+        if l.isdigit() and first_number == False:
             first_number = True
+            if l == "0": return False
         elif first_number and l.isalpha():
             return False
+        
     #No periods, spaces, or punctuation marks are allowed.
     if not s.isalnum():
         return False
+    return True
 main()
