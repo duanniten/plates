@@ -10,7 +10,7 @@ def is_valid(s:str):
       
     #vanity plates may contain a maximum of 6 characters (letters or numbers) and a minimum of 2 characters.
     if not 1<len(s)<7:
-        return False
+        return True
     
     #All vanity plates must start with at least two letters
     if not s[0].isalpha() or not s[1].isalpha():
