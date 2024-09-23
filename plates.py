@@ -29,4 +29,6 @@ def is_valid(s:str):
     if not s.isalnum():
         return False
     return True
-main()
+
+if __name__ == '__main__':
+    main()
